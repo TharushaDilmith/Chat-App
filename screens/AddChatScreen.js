@@ -33,7 +33,7 @@ const AddChatScreen = ({navigation}) => {
             onChangeText={(text)=>setinput(text)}
             onSubmitEditing={createChat}
             leftIcon={<Icon name="wechat" type="antDesign" size={30} color="black" />} />
-            <Button onPress={createChat} title="Create new Chat"/>
+            <Button disabled={!input} onPress={createChat} title="Create new Chat"/>
         </View>
     )
 }
