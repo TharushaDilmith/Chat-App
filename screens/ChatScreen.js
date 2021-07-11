@@ -13,8 +13,9 @@ import { TextInput } from "react-native-gesture-handler";
 import { useState } from "react";
 import { Keyboard } from "react-native";
 import { TouchableWithoutFeedback } from "react-native";
-import * as firebase from "firebase";
 import { auth, db } from "../firebase";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 const ChatScreen = ({ navigation, route }) => {
   const [input, setinput] = useState("");
@@ -36,7 +37,7 @@ const ChatScreen = ({ navigation, route }) => {
       .collection("chats")
       .doc(route.params.id)
       .collection("messages")
-      .orderBy("timestamp", "desc")
+      .orderBy("timestamp", "asc")
       .onSnapshot((snapshot)=>setmessages(
         snapshot.docs.map(doc=>({
           id:doc.id,
@@ -216,7 +217,8 @@ const styles = StyleSheet.create({
     borderRadius:20,
     marginRight:15,
     maxWidth:"80%",
-    position:"relative"
+    position:"relative",
+    marginBottom:20,
   },
   senderName:{
     left:10,
@@ -233,6 +235,6 @@ const styles = StyleSheet.create({
   recieverText:{
     color:"black",
     fontWeight:"500",
-    marginLeft:10
+    marginLeft:10,
   }
 });
