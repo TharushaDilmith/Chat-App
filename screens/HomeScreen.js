@@ -31,7 +31,7 @@ const HomeScreen = ({navigation}) => {
     
     useLayoutEffect(() => {
         navigation.setOptions({
-            title:"Signal",
+            title:"My chats",
             headerTitleAlign :"center",
             headerStyle :{backgroundColor :"#fff"},
             headerTitleStyle :{color :"black"},
@@ -49,11 +49,9 @@ const HomeScreen = ({navigation}) => {
                     flexDirection:"row",
                     justifyContent:"space-between",
                     width:80,
-                    marginRight:20
+                    
                 }}>
-                    <TouchableOpacity>
-                        <AntDesign name ="camerao" size={24} color="black"/>
-                    </TouchableOpacity>
+                   
                     <TouchableOpacity onPress={()=>navigation.navigate("AddChat")} >
                         <SimpleLineIcons name ="pencil" size={21} color="black"/>
                     </TouchableOpacity>

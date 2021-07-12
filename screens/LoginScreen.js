@@ -32,7 +32,7 @@ useEffect(() => {
       <StatusBar style="light" />
       <Image
         source={{
-          uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Signal-Logo.svg/1200px-Signal-Logo.svg.png",
+          uri: "https://assets.stickpng.com/images/580b57fcd9996e24bc43c526.png",
         }}
         style={{ width: 200, height: 200 }}
       />
@@ -53,7 +53,7 @@ useEffect(() => {
           onSubmitEditing={signIn}
         />
       </View>
-      <Button containerStyle={styles.button} onPress={signIn} title="Login" />
+      <Button containerStyle={styles.button} onPress={signIn} title="Login"  />
       <Button containerStyle={styles.button} onPress ={()=> navigation.navigate('Register')} type="outline" title="Register" />
       <View style={{height:100}}/>
     </KeyboardAvoidingView>
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
+    backgroundColor:"white"
   },
   inputContainer: {
       width:300,

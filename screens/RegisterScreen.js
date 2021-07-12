@@ -39,7 +39,7 @@ const RegisterScreen = ({navigation}) => {
     >
       <StatusBar style="light" />
       <Text h3 style={{ marginBottom: 50 }}>
-        Create a Signal account
+        Create a Chat account
       </Text>
 
       <View style={styles.inputContainer}>
